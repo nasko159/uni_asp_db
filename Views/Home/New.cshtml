@@ -1,0 +1,10 @@
+@model Contact
+@{
+    ViewData["Title"] = "Добавяне на нов контакт";
+}
+
+<div>
+    <form asp-controller="Home" asp-action="New" method="post">
+        <partial name="_ContactForm" />
+    </form>
+</div>

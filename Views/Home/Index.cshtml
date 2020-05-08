@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Contact>
+@{
+    ViewData["Title"] = "Начална страница";
+}
+
+<div>
+    <table>
+        @foreach (var contact in Model)
+        {
+            <tr>
+                <td>
+                    @contact.FirstName @contact.LastName
+                </td>
+                <td>
+                    <a asp-controller="Home" asp-action="Show" asp-route-id="@contact.Id">Виж</a>
+                </td>
+                <td>
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@contact.Id">Редактирай</a>
+                </td>
+            </tr>
+        }
+    </table>
+    <a asp-controller="Home" asp-action="New">Добави нов</a>
+</div>

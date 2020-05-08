@@ -1,0 +1,10 @@
+@model Contact
+@{
+    ViewData["Title"] = "Редактиране";
+}
+
+<div>
+    <form asp-controller="Home" asp-action="Edit" asp-route-id="@Model.Id" method="post">
+        <partial name="_ContactForm" />
+    </form>
+</div>

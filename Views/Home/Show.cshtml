@@ -1,0 +1,41 @@
+@model Contact
+@{
+    ViewData["Title"] = Model.FirstName;
+}
+
+<div>
+    <table>
+        <tr>
+            <td>
+                Име:
+            </td>
+            <td>
+                @Model.FirstName
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Фамилия:
+            </td>
+            <td>
+                @Model.LastName
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Електронна поща:
+            </td>
+            <td>
+                @Model.Email
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Рождена дата:
+            </td>
+            <td>
+                @Model.BirthDate.ToString("dd.MM.yyyy")
+            </td>
+        </tr>
+    </table>
+</div>
